@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SecurityPipeline.Pipeline;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace SecurityPipeline.Pipeline
+namespace SecurityPipeline
 {
     [TestAuthenticationFilter]
     [TestAuthorizationFilter]
@@ -13,7 +14,7 @@ namespace SecurityPipeline.Pipeline
     {
         public IHttpActionResult Get() 
         {
-            Helper.Write("Controller", User);
+            Helper.Write("Test Controller", User);
             return Ok();
         }
     }
